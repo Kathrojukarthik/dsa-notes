@@ -1,0 +1,143 @@
+Here is the detailed mapping of the problems you solved, categorized by pattern, with importance and priority based on frequency in interviews (most asked first):
+
+1. Binary Search (Very High Importance)
+
+* Problems:
+
+  * Binary Search
+  * Search in Rotated Sorted Array
+  * Search in Rotated Sorted Array II
+  * Find Minimum in Rotated Sorted Array
+  * First Bad Version
+  * Guess Number Higher or Lower
+  * Search Insert Position
+  * Kth Missing Positive Number
+  * Find the Smallest Divisor Given a Threshold
+  * Median of Two Sorted Arrays
+  * Capacity To Ship Packages Within D Days
+* Pattern Type: Binary Search on Index or Answer Space
+* Frequency: Very High in FAANG rounds
+
+2. Sliding Window (Very High Importance)
+
+* Problems:
+
+  * Permutation in String
+  * Fruit Into Baskets
+  * Longest Repeating Character Replacement
+  * Binary Subarrays With Sum
+  * Number of Substrings Containing All Three Characters
+* Pattern Type: Fixed window, variable window, and character frequency tracking
+* Frequency: Very High, especially in tech screens
+
+3. Two Pointers (High Importance)
+
+* Problems:
+
+  * 3Sum
+  * 3Sum Closest
+  * 4Sum
+  * Container With Most Water
+  * Move Zeroes
+  * Remove Element
+  * Longest Substring Without Repeating Characters
+* Pattern Type: Opposite direction or fast-slow pointer
+* Frequency: High
+
+4. Hashing (High Importance)
+
+* Problems:
+
+  * Contains Duplicate
+  * Contains Duplicate II
+  * Valid Anagram
+  * Intersection of Two Arrays
+  * Check If N and Its Double Exist
+  * Majority Element
+* Pattern Type: HashSet, HashMap, frequency counter
+* Frequency: High in warmups or screeners
+
+5. Prefix Sum (Medium to High Importance)
+
+* Problems:
+
+  * Count Number of Nice Subarrays
+  * Binary Subarrays With Sum
+  * Number of Substrings Containing All Three Characters
+  * Maximum Points You Can Obtain from Cards
+* Pattern Type: Prefix cumulative sum, hash count
+* Frequency: Medium, useful in subarray count problems
+
+6. Kadane’s Algorithm (Medium Importance)
+
+* Problems:
+
+  * Maximum Subarray
+  * Best Time to Buy and Sell Stock
+* Pattern Type: Dynamic maximum subarray
+* Frequency: Very common classic
+
+7. Matrix Traversal (Medium Importance)
+
+* Problems:
+
+  * Matrix Diagonal Sum
+  * Spiral Matrix
+  * Spiral Matrix II
+  * Set Matrix Zeroes
+  * Check if Matrix Is X-Matrix
+  * Lucky Numbers in a Matrix
+* Pattern Type: Grid traversal, spiral or conditional marking
+* Frequency: Moderate, often in on-site or warmups
+
+8. Math / Bit Manipulation (Medium Importance)
+
+* Problems:
+
+  * Add Binary
+  * Add to Array-Form of Integer
+  * Pow(x, n)
+  * Factorial Trailing Zeroes
+  * Reverse Integer
+  * Integer Break
+  * Reach a Number
+  * Number of Digit One
+  * Climbing Stairs
+  * Single Number
+  * Maximum Count of Positive Integer and Negative Integer
+* Pattern Type: Math tricks, formula-based
+* Frequency: Occasional but good to know
+
+9. Sorting / Greedy (Medium Importance)
+
+* Problems:
+
+  * Sort Colors
+  * Sort an Array
+  * Merge Intervals
+  * Check if Array Is Sorted and Rotated
+  * Majority Element
+  * Minimum Cost to Move Chips
+* Pattern Type: Greedy, In-place sorting
+* Frequency: Frequently asked in rounds 1 or 2
+
+10. No Specific Pattern (Low to Medium Importance but often appear as variations)
+
+* Problems:
+
+  * Longest Common Prefix
+  * Largest Odd Number in String
+  * Concatenation of Array
+  * Build Array from Permutation
+  * Find Missing and Repeated Values
+  * Guess Number Higher or Lower
+  * Missing Number
+  * Reverse String
+  * Reverse String II
+  * Reverse Words in a String
+  * Trapping Rain Water
+  * Two Sum
+
+Note: Trapping Rain Water and Two Sum are classic must-know problems, but they use a combination of ideas (prefix + two pointers).
+
+Recommendation: Start revision from top to bottom based on importance.
