@@ -1,0 +1,66 @@
+# 🔐 Decrypt Circular Array (Using k-value)
+
+🔹 Intuition: Traverse circularly using modulo to sum the next or previous k elements depending on whether k is positive or negative.
+
+---
+
+## 🔍 Problem Statement
+Given a circular array code and an integer k:
+- Replace every code[i] with the sum of the next k elements if k > 0,
+- Replace with sum of the previous k elements if k < 0,
+- Replace with 0 if k == 0.
+
+📌 Example:
+- Input: code = [5,7,1,4], k = 3  
+  Output: [12,10,16,13]
+
+- Input: code = [2,4,9,3], k = -2  
+  Output: [12,5,6,13]
+
+---
+
+## 💡 Logic & Intuition
+- If k > 0: loop through the next k elements: (i + 1) to (i + k), use modulo to wrap around.
+- If k < 0: loop through the previous k elements: (i - 1) to (i - k), again use modulo to wrap around safely.
+- If k == 0: all elements become 0.
+
+---
+
+## ⚙️ Approach
+1. Handle the case k == 0 early → return array of zeros.
+2. For each index i:
+   - Initialize sum = 0.
+   - Loop j from 1 to |k|.
+     - For k > 0: add code[(i + j) % n]
+     - For k < 0: add code[(i - j + n) % n]  ← to handle negative wrap-around.
+   - Store sum in res[i].
+3. Return the result array.
+
+---
+
+## ✅ Code (Java)
+```java
+public int[] decrypt(int[] code, int k) {
+    int n = code.length;
+    int[] res = new int[n];
+
+    if (k == 0) return res;
+
+    for (int i = 0; i < n; i++) {
+        int sum = 0;
+
+        if (k > 0) {
+            for (int j = 1; j <= k; j++) {
+                sum += code[(i + j) % n];
+            }
+        } else {
+            for (int j = 1; j <= -k; j++) {
+                sum += code[(i - j + n) % n]; // handle negative wrap-around
+            }
+        }
+
+        res[i] = sum;
+    }
+
+    return res;
+}
