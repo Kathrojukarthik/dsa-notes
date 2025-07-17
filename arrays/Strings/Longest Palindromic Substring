@@ -1,0 +1,62 @@
+🔐 Longest Palindromic Substring (Expand Around Center)
+
+🔹 Intuition:
+We check every index in the string as a potential center of a palindrome and expand outward to find the longest one.
+
+📌 Problem Statement:
+Given a string s, return the longest palindromic substring in s.
+
+Examples:
+Input: "babad" → Output: "bab" or "aba"
+Input: "cbbd" → Output: "bb"
+
+💡 Core Idea:
+- A palindrome mirrors around its center.
+- There are 2 types of centers:
+  • Odd length → one character center (e.g., "racecar" center at 'e')
+  • Even length → two-character center (e.g., "abba" center between 'b' and 'b')
+- For each character:
+  • Expand outward for both types.
+  • Track and update the max palindrome length and starting index.
+
+🧠 Approach:
+1. Handle edge case: if string is empty or null, return "".
+2. Initialize variables:
+   - startInd = 0 → starting index of longest palindrome
+   - maxlen = 0 → maximum length found so far
+3. Loop through each index i in the string:
+   - Expand around (i, i) → odd length
+   - Expand around (i, i + 1) → even length
+   - Take the longer one → currlen
+   - If currlen > maxlen:
+     - Update maxlen
+     - Update startInd = i - (currlen - 1) / 2
+4. Return substring from startInd to startInd + maxlen
+
+✅ Java Code:
+public String longestPalindrome(String s) {
+    if (s == null || s.length() < 1) return "";
+    int startInd = 0;
+    int maxlen = 0;
+
+    for (int i = 0; i < s.length(); i++) {
+        int len1 = expandAround(s, i, i);       // Odd length
+        int len2 = expandAround(s, i, i + 1);   // Even length
+        int currlen = Math.max(len1, len2);
+
+        if (currlen > maxlen) {
+            maxlen = currlen;
+            startInd = i - (currlen - 1) / 2;
+        }
+    }
+
+    return s.substring(startInd, startInd + maxlen);
+}
+
+private int expandAround(String s, int left, int right) {
+    while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+        left--;
+        right++;
+    }
+    return right - left - 1;
+}
