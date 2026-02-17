@@ -30,3 +30,20 @@ for file in os.listdir(folder):
 
     except Exception:
         pass
+
+
+
+
+mkdir images
+
+for i in $(seq 0 255); do
+  host="http://0x$(printf '%02x' $i).a.hackycorp.com"
+  
+  img=$(curl -s "$host" | grep -Eo '<img src="[^"]+"' | cut -d'"' -f2)
+  
+  if [ ! -z "$img" ]; then
+    fullurl="$host/$img"
+    echo "Downloading from $host"
+    curl -s "$fullurl" -o images/$(printf '%02x' $i).png
+  fi
+done
